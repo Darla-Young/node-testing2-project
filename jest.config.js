@@ -3,8 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
-/** @type {import('jest').Config} */
-const config = {
+
+module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -15,7 +15,7 @@ const config = {
   // cacheDirectory: "C:\\Users\\dyoung\\AppData\\Local\\Temp\\jest",
 
   // Automatically clear mock calls, instances, contexts and results before every test
-  clearMocks: true,
+  // clearMocks: false,
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
@@ -193,6 +193,4 @@ const config = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
-
-module.exports = config;
+}
