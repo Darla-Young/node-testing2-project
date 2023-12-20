@@ -3,6 +3,7 @@ const db = require('../../data/dbConfig')
 module.exports = {
   addStuff,
   getStuff,
+  removeStuff,
 }
 
 async function addStuff (stuff) {
@@ -14,4 +15,9 @@ async function addStuff (stuff) {
 async function getStuff () {
   const stuff = await db('stuff')
   return stuff
+}
+
+async function removeStuff (id) {
+  await db('stuff').where('id', id).del()
+  return getStuff()
 }
